@@ -5,6 +5,13 @@ const { JSDOM } = jsdom
 
 const url = "https://myself-bbs.com/thread-46593-1-1.html"
 
+const fs = require('fs');
+const dir = '../video';
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir, { recursive: true });
+}
+
 // define functions
 const analyze = async () => {
 
